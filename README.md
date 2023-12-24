@@ -120,7 +120,6 @@ interface User {
         alert(error.message);
     }
 
-    //Event Logic
     function initApp() {
         Promise.all([getAllTodos(), getAllUsers()]).then((values) =>{
             [todos,users] = values;
@@ -162,7 +161,6 @@ function handleClose (this: HTMLSpanElement){
     
 }
 
-//Async Logic
 async function getAllTodos(): Promise<Todo[]> {
     try {
         const response = await fetch(
